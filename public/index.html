@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.9.0/p5.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.9.0/addons/p5.dom.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.9.0/addons/p5.sound.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/gh/ml5js/Intro-ML-Arts-IMA@ml5-build-10-7-19/ml5_build/ml5.min.js"></script>
+  <script src="p5.sound.min.js"></script>
+
+  <link href="https://fonts.googleapis.com/earlyaccess/roundedmplus1c.css" rel="stylesheet" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Kiwi+Maru&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Gloria+Hallelujah&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./style.css">
+  <meta charset="utf-8">
+  <script src="/socket.io/socket.io.js"></script>
+</head>
+
+<body>
+  
+  <div class="title">
+    <h2>Commentable</h2>
+    <h2>- your emotion -</h2>
+  </div>
+
+  <div class="container-sm">
+    <h3>今の表情</h3>
+    <div class="nowface_emotion">
+      <div class="nowface">
+        <p id="now-face">😐</p>
+      </div>
+      <div class="nowemotion">
+        <label>普通</label>
+        <progress id="neutral" min="0" max="100" value="0"></progress>
+        <br>
+        <label>喜び</label>
+        <progress id="happy" min="0" max="100" value="0"></progress>
+        <br>
+        <label>悲し</label>
+        <progress id="sad" min="0" max="100" value="0"></progress>
+        <br>
+        <label>怒り</label>
+        <progress id="angry" min="0" max="100" value="0"></progress>
+        <br>
+        <label>恐れ</label>
+        <progress id="fearful" min="0" max="100" value="0"></progress>
+        <br>
+        <label>嫌悪</label>
+        <progress id="disgusted" min="0" max="100" value="0"></progress>
+        <br>
+        <label>驚き</label>
+        <progress id="surprised" min="0" max="100" value="0"></progress>
+      </div>
+    </div> 
+    
+    <div class=" myFaceCount">
+      <h3>私の表情カウンター</h3>
+      <div class=" FaceCount">
+          <span id="count_neutral">0</span>
+          <h1>😐</h1>
+      </div> 
+      <div class=" FaceCount">
+          <span id="count_happy">0</span>
+          <h1>😄</h1>
+      </div>
+      <div class=" FaceCount">
+          <span id="count_sad">0</span>
+          <h1>😢</h1>
+      </div>
+      <div class=" FaceCount">
+          <span id="count_angry">0</span>
+          <h1>😡</h1>
+      </div>
+      <div class=" FaceCount">
+          <span id="count_fearful">0</span>
+          <h1>😱</h1>
+      </div>
+      <div class=" FaceCount">
+          <span id="count_disgusted">0</span>
+          <h1>😫</h1>
+      </div>
+      <div class=" FaceCount">
+          <span id="count_surprised">0</span>
+          <h1>😮</h1>
+      </div>
+    </div>
+    
+    <div class="penname">
+      <h4 class="input-group-text" >ペンネーム</h4>
+      <input type="text" id="name" class="form-control_penname" value="匿名" aria-label="Username"
+        aria-describedby="basic-addon1">
+    </div>
+
+    <div class="coment">
+      <h4 class="input-group-text">コメント</h4>
+      <input type="text" id="message" class="form-control_coment" placeholder="質問受付中！" aria-label="Example text with button addon"
+        aria-describedby="button-addon1" maxlength="50" oninput="checkEmail()">
+      <button class="btn btn-outline-ssecondary" type="submit" id="send" disabled>送信</button>
+    </div>
+    <div class="kiroku">
+      <textarea id="textarea_comment_history" readonly class="form-control_kiroku" rows="4" placeholder="コメント履歴"></textarea>
+    </div>
+
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="sketch.js"></script>
+
+
+  </div>
+
+</body>
+
+</html>

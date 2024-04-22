@@ -1,0 +1,117 @@
+html, body {
+  font-family: 'Kiwi Maru', serif;
+  margin: 0;
+  padding: 0;
+  background-color: rgb(83, 97, 175);
+  color:rgb(255, 255, 255);
+  text-align: center;
+}
+canvas {
+  display: block;
+}
+p{
+  font-size: 20px;
+}
+.title{
+  margin:20px 0;
+}
+h2{
+  margin:0;
+  padding:0;
+  text-align: center;
+  font-family: 'Gloria Hallelujah', cursive;
+  font-size: 30px;
+}
+h3{
+  width: 80%;
+  margin:0 0 0 70px;
+  padding:0;
+  text-align: left;
+  font-size: 20px;
+}
+#now-face{
+  font-size: 100px;
+  text-align: center;
+  margin: -10px 0px 0px 0px;
+}
+
+.container-sm{
+  display: inline-block;
+  width: 500px;
+  background-color: rgb(61, 60, 124);
+  border-radius:30px;
+  padding: 40px 0;
+  margin: 0px;
+}
+
+.nowface{
+  margin: 0px 10px 0px 70px;
+  float: left;
+  text-align: center;
+}
+
+.nowemotion{
+  margin: 0px 20px 0px 20px;
+  float: left;
+}
+
+.nowface_emotion{
+  margin: 10px 0px 0px 0px;
+  text-align: center;
+}
+
+.FaceCount{
+  display: inline-block;
+  margin: 0px 10px 0px 10px;
+}
+
+.myFaceCount{
+  clear: both;
+  text-align: center;
+  margin: 210px 0px 20px 0px;
+}
+.form-control_penname{
+  font-family: 'Kiwi Maru', serif;
+  border-radius: 10px;
+  border: none;
+  padding:8px;
+  width:60%;
+}
+.form-control_coment{
+  font-family: 'Kiwi Maru', serif;
+  border-radius: 10px;
+  border: none;
+  padding:8px;
+  width:60%;
+}
+.form-control_kiroku{
+  font-family: 'Kiwi Maru', serif;
+  border-radius: 10px;
+  border: none;
+  padding:8px;
+  width:78%;
+}
+.penname{
+  margin:10px 10px 10px 30px;
+  text-align: left;
+}
+.coment{
+  margin:10px 10px 10px 30px;
+  text-align: left;
+}
+.kiroku{
+  margin:10px 10px 10px 30px;
+  text-align: left;
+}
+.btn{
+  border-radius: 10px;
+  border: none;
+  margin:0 0 0 10px;
+  padding:8px 15px;
+}
+h4{
+  margin: 5px 0;
+}
+h1{
+  margin: 0;
+}
